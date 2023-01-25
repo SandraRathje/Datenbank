@@ -1,0 +1,6 @@
+﻿SELECT zutat.ZUTATENNR, zutat.BEZEICHNUNG,zutat.NETTOPREIS
+FROM zutat
+WHERE zutat.NETTOPREIS <
+(SELECT zutat.NETTOPREIS
+FROM zutat
+WHERE zutat.BEZEICHNUNG =  'Zucchini');
